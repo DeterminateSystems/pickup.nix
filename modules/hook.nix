@@ -19,7 +19,7 @@ let
   };
 in
 {
-  config.environment.etc."pickup/kernelmodules".source = modulesClosure;
+  environment.etc."pickup/kernelmodules".source = modulesClosure;
 
   boot.postBootCommands = ''
     PATH=${pkgs.nix}/bin /nix/.nix-netboot-serve-db/register
